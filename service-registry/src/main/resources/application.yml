@@ -3,9 +3,9 @@ server:
 
 eureka:
   instance:
-    hostname: eureka-0
+    hostname: "${HOSTNAME}.eureka"
   client:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
